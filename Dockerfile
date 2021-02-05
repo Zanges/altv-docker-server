@@ -17,8 +17,9 @@ VOLUME /opt/altv
 WORKDIR /opt/altv
 # INSTALL ALTV PKG
 RUN bash -c 'npm install -g altv-pkg' # https://github.com/Stuyk/altv-pkg
-# 
-
+# DOWNLOAD SCRIPTS
+RUN wget https://raw.githubusercontent.com/Zanges/altv-docker-server/main/update.sh
+RUN wget https://raw.githubusercontent.com/Zanges/altv-docker-server/main/entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "bash" ]
