@@ -1,6 +1,8 @@
 #!/bin/bash -x
 
-wget --no-cache -qxN -P /opt/altv/ https://cdn.altv.mp/server/release/x64_linux/altv-server
+chmod -R a+rwX /opt/altv/
+
+wget --no-cache -nvxN -P /opt/altv/ https://cdn.altv.mp/server/release/x64_linux/altv-server
 wget --no-cache -qxN -P /opt/altv/ https://cdn.altv.mp//others/server.cfg
 chmod +x /opt/altv/altv-server
 
