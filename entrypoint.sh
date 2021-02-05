@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
-./update.sh
+/opt/altv/update.sh
 
-exec ./altv-server --logfolder  "logs/"
+ln -f /opt/altv/ /altv-persistent/
+
+exec /opt/altv/altv-server --logfolder  "logs/"
